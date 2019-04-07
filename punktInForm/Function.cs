@@ -1,25 +1,33 @@
+using System;
+
 namespace punktInForm
 {
     public class Function
     {
-        public static int deltaX(Point a, Point b)
+        public static double deltaX(Point a, Point b)
         {
-            return b.x / a.x;
+            return b.x - a.x;
         }
         
-        public static int deltaY(Point a, Point b)
+        public static double deltaY(Point a, Point b)
         {
-            return b.y / a.y;
+            return b.y - a.y;
         }
 
-        public static int XValue(int deltaX, int x)
+        public static double XValue(double deltaX, double deltaY)
         {
-            return deltaX * x;
+            return deltaY / deltaX;
         }
-
-        public static int YValue(int deltaY, int y)
+        
+        public static double YValue(Point a, double xValue)
         {
-            return deltaY*y;
+            double y = 0;
+            for(int i = 0; i<=a.x;i++)
+            {
+                y = a.y - xValue;
+            }
+
+            return y;
         }
     }
 }
