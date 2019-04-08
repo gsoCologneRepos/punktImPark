@@ -1,13 +1,16 @@
+using System;
+
 namespace punktInForm
 {
     public struct Point
     {
-        public int x, y;
+        public int X { get; }
+        public int Y { get; }
 
         public Point(int p1, int p2)
         {
-            x = p1;
-            y = p2;
+            X = p1;
+            Y = p2;
         }
     }
 }

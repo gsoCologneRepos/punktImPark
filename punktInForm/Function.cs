@@ -6,12 +6,12 @@ namespace punktInForm
     {
         public static double deltaX(Point a, Point b)
         {
-            return b.x - a.x;
+            return b.X - a.X;
         }
         
         public static double deltaY(Point a, Point b)
         {
-            return b.y - a.y;
+            return b.Y - a.Y;
         }
 
         public static double XValue(double deltaX, double deltaY)
@@ -22,9 +22,9 @@ namespace punktInForm
         public static double YValue(Point a, double xValue)
         {
             double y = 0;
-            for(int i = 0; i<=a.x;i++)
+            for(int i = 0; i<=a.X;i++)
             {
-                y = a.y - xValue;
+                y = a.Y - xValue;
             }
 
             return y;

@@ -10,7 +10,7 @@ namespace punktInForm
             double yValueAB = Function.YValue(a, xValueAB);
 
 
-            Plot = xValueAB * e.x + yValueAB;   
+            Plot = xValueAB * e.X + yValueAB;   
         }
     }
 }

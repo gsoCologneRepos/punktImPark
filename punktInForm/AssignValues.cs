@@ -5,15 +5,24 @@ namespace punktInForm
     public class AssignValues
     {
 
-        public static Point setPoint()
+        public static Point SetPoint()
         {
             int x, y;
-            Console.WriteLine("X Wert:");
-            x = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Y Wert:");
-            y = Int32.Parse(Console.ReadLine());
-            Point a = new Point(x,y);
-            return a;
+
+            Console.Write("X-Wert: ");
+            while(!int.TryParse(Console.ReadLine(), out x))
+            {
+                Console.Write("X-Wert: ");
+            }
+
+            Console.Write("Y-Wert: ");
+            while(!int.TryParse(Console.ReadLine(), out y))
+            {
+                Console.Write("Y-Wert: ");
+            }
+            
+            var point = new Point(x,y);
+            return point;
         }
     }
 }
