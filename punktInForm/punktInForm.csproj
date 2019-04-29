@@ -6,7 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+<<<<<<< HEAD
       <PackageReference Include="FluentAssertions" Version="5.6.0" />
+=======
+>>>>>>> d605e0e8e6af8e2295586904b13fde527eccfb12
       <PackageReference Include="xunit" Version="2.4.1" />
     </ItemGroup>
 
