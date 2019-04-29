@@ -1,0 +1,11 @@
+C:\Users\rosario\Source\Repos\punktImPark2\punktInForm\obj\Debug\netcoreapp2.2\punktInForm.csprojAssemblyReference.cache
+C:\Users\rosario\Source\Repos\punktImPark2\punktInForm\obj\Debug\netcoreapp2.2\punktInForm.csproj.CoreCompileInputs.cache
+C:\Users\rosario\Source\Repos\punktImPark2\punktInForm\obj\Debug\netcoreapp2.2\punktInForm.AssemblyInfoInputs.cache
+C:\Users\rosario\Source\Repos\punktImPark2\punktInForm\obj\Debug\netcoreapp2.2\punktInForm.AssemblyInfo.cs
+C:\Users\rosario\Source\Repos\punktImPark2\punktInForm\bin\Debug\netcoreapp2.2\punktInForm.deps.json
+C:\Users\rosario\Source\Repos\punktImPark2\punktInForm\bin\Debug\netcoreapp2.2\punktInForm.runtimeconfig.json
+C:\Users\rosario\Source\Repos\punktImPark2\punktInForm\bin\Debug\netcoreapp2.2\punktInForm.runtimeconfig.dev.json
+C:\Users\rosario\Source\Repos\punktImPark2\punktInForm\bin\Debug\netcoreapp2.2\punktInForm.dll
+C:\Users\rosario\Source\Repos\punktImPark2\punktInForm\bin\Debug\netcoreapp2.2\punktInForm.pdb
+C:\Users\rosario\Source\Repos\punktImPark2\punktInForm\obj\Debug\netcoreapp2.2\punktInForm.dll
+C:\Users\rosario\Source\Repos\punktImPark2\punktInForm\obj\Debug\netcoreapp2.2\punktInForm.pdb

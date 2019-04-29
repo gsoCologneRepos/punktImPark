@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace punktInForm
 {
@@ -7,48 +6,21 @@ namespace punktInForm
     {
         static void Main(string[] args)
         {
+            var points = new Point[5];
+
             Console.WriteLine("Punkt A eingeben:");
-            var a = AssignValues.SetPoint();
+            points[0] = AssignValues.SetPoint();
             Console.WriteLine("Punkt B eingeben:");
-            var b = AssignValues.SetPoint();
+            points[1] = AssignValues.SetPoint();
             Console.WriteLine("Punkt C eingeben:");
-            var c = AssignValues.SetPoint();
+            points[2] = AssignValues.SetPoint();
             Console.WriteLine("Punkt D eingeben:");
-            var d = AssignValues.SetPoint();
+            points[3] = AssignValues.SetPoint();
 
             Console.WriteLine("Bitte gewünschten Punkt eingeben:");
-            var e = AssignValues.SetPoint();
+            points[4] = AssignValues.SetPoint();
             
-            var functionAB = new Graph(a, b, e);
-            var functionCD = new Graph(d, c, e);
-            var functionAD = new Graph(a, d, e);
-            var functionBC = new Graph(c, b, e);
-            var ADIsGood = false;
-            var BCIsGood = false;
-
-            if (double.IsNaN(functionAD.Plot))
-            {
-                ADIsGood = a.X < e.X;
-            }
-            else
-            {
-                ADIsGood = functionAD.Plot > e.Y;
-            }
-
-            if (double.IsNaN(functionBC.Plot))
-            {
-                BCIsGood = b.X > e.X;
-            }
-            else
-            {
-                BCIsGood = functionBC.Plot < e.Y;
-            }
-
-
-            if (ADIsGood &&
-                BCIsGood &&
-                functionAB.Plot < e.Y &&
-                functionCD.Plot > e.Y)
+            if(IsPointInSquare(points))
             {
                 Console.WriteLine("Dein Punkt ist im Viereck");
             }
@@ -58,6 +30,44 @@ namespace punktInForm
             }
 
             Console.ReadKey();
+        }
+
+        public static bool IsPointInSquare(Point[] points)
+        {
+            if(points.Length != 5)
+            {
+                return false;
+            }
+
+            var functionAB = new Graph(points[0], points[1], points[4]);
+            var functionCD = new Graph(points[3], points[2], points[4]);
+            var functionAD = new Graph(points[0], points[3], points[4]);
+            var functionBC = new Graph(points[2], points[1], points[4]);
+            var ADIsGood = false;
+            var BCIsGood = false;
+
+            if (double.IsNaN(functionAD.Plot))
+            {
+                ADIsGood = points[0].X < points[4].X;
+            }
+            else
+            {
+                ADIsGood = functionAD.Plot > points[4].Y;
+            }
+
+            if (double.IsNaN(functionBC.Plot))
+            {
+                BCIsGood = points[1].X > points[4].X;
+            }
+            else
+            {
+                BCIsGood = functionBC.Plot < points[4].Y;
+            }
+
+            return ADIsGood &&
+                   BCIsGood &&
+                   functionAB.Plot < points[4].Y &&
+                   functionCD.Plot > points[4].Y;
         }
     }
 }
